@@ -1,42 +1,23 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Urls } from "../../data/urls"
 import { List, Navbar, Title } from "./styled"
 import { FaBars } from "react-icons/fa"
 import { Link } from "gatsby"
 
 function NavBar() {
-  const mobileBreakpoint = 500
-  const [screenWidth, setScreenWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
-  )
-  const [showNav, setShowNav] = useState(false)
-
-  useEffect(() => {
-    function setWidth() {
-      setScreenWidth(window.innerWidth)
-    }
-    window.addEventListener("resize", setWidth)
-
-    return () => window.removeEventListener("resize", setWidth)
-  }, [])
+  const [show, setShow] = useState(false)
 
   return (
     <Navbar>
       <Title>
-        <Link to="/" onClick={() => setShowNav(false)}>
+        <Link to="/" onClick={() => setShow(false)}>
           Master Cooking
         </Link>
       </Title>
-      {screenWidth <= 500 ? (
-        <FaBars onClick={() => setShowNav(!showNav)} />
-      ) : null}
-      <List
-        className={`${screenWidth <= 500 ? "mobile" : ""} ${
-          screenWidth <= 500 && showNav ? "show" : ""
-        }`}
-      >
+      <FaBars className="toggler" onClick={() => setShow(!show)} />
+      <List className={show ? "show" : ""}>
         {Urls.map(({ name, path }, index) => (
-          <Link key={index} to={path} onClick={() => setShowNav(false)}>
+          <Link key={index} to={path} onClick={() => setShow(false)}>
             {name}
           </Link>
         ))}

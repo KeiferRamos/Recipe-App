@@ -1,17 +1,11 @@
-import React, { memo, useState, useEffect } from "react"
+import React, { memo, useState } from "react"
 import "../../assets/style/slick-theme.css"
 import { StyledSlider } from "./style"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import RecipeDisplay from "../recipe/index"
 
 function SliderComp({ items = [] }) {
-  const [screenWidth, setScreenWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
-  )
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth)
-  }, [window.innerWidth])
+  const [screenWidth] = useState(document.documentElement.clientWidth)
 
   const LeftNavButton = ({ onClick }) => (
     <FiChevronLeft className="slick-arrow left" onClick={onClick} />

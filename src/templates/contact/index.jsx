@@ -43,7 +43,7 @@ function ContactUs({
   )
 }
 
-export const getData = graphql`
+export const getFeatured = graphql`
   query {
     recipe: allContentfulRecipe(filter: { featured: { eq: true } }) {
       nodes {

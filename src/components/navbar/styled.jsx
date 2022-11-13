@@ -8,6 +8,16 @@ export const Navbar = styled.nav`
   position: relative;
   padding: 0 15%;
 
+  .toggler {
+    display: none;
+  }
+
+  @media (max-width: 500px) {
+    .toggler {
+      display: block;
+    }
+  }
+
   @media (max-width: 900px) {
     padding: 10px;
   }
@@ -15,29 +25,6 @@ export const Navbar = styled.nav`
   svg {
     font-size: 25px;
     cursor: pointer;
-  }
-
-  .mobile {
-    display: grid;
-    position: absolute;
-    background: #fff;
-    width: 100%;
-    height: 0;
-    top: 80%;
-    left: 0;
-    gap: 5px;
-    overflow: hidden;
-    transition: all 0.4s;
-    z-index: 1000;
-
-    a {
-      margin: 0 10px;
-      border-radius: 2px;
-      border: 1px solid #bebebe;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   .show {
@@ -106,5 +93,28 @@ export const List = styled.ul`
 
   li {
     cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    display: grid;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0;
+    top: 80%;
+    left: 0;
+    gap: 5px;
+    overflow: hidden;
+    transition: all 0.4s;
+    z-index: 1000;
+
+    a {
+      margin: 0 10px;
+      border-radius: 2px;
+      border: 1px solid #bebebe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `

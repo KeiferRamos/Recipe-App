@@ -4,10 +4,6 @@ import { Helmet } from "react-helmet"
 function Seo({ name, image }) {
   const [url, setUrl] = useState("helllo world")
 
-  // useEffect(() => {
-  //   setUrl(window.location.href)
-  // }, [])
-
   return (
     <Helmet>
       <title>{name ? name : "Recipe App"}</title>
