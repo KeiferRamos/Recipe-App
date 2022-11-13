@@ -32,7 +32,7 @@ function Recipe({ data }) {
     name,
   } = data.recipe
 
-  const url = window.location.href
+  const url = "gegege"
 
   return (
     <Wrapper>

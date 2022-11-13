@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import NavBar from "../components/navbar"
 import Footer from "../components/footer"
-import ArrowUp from "../components/arrow-up"
 
 export const Layout = styled.div`
   display: flex;
@@ -22,7 +21,6 @@ function Wrapper({ children }) {
       <NavBar />
       {children}
       <Footer />
-      <ArrowUp />
     </div>
   )
 }

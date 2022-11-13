@@ -5,7 +5,9 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import RecipeDisplay from "../recipe/index"
 
 function SliderComp({ items = [] }) {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
+  )
 
   useEffect(() => {
     setScreenWidth(window.innerWidth)

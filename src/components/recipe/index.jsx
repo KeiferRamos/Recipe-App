@@ -6,12 +6,7 @@ function RecipeDisplay({ image, name, cookingTime }) {
   const title = name.toLowerCase().replaceAll(/ /g, "-")
 
   return (
-    <Link
-      to={`/${title}`}
-      onClick={() => {
-        window.scroll({ top: 0, left: 0 })
-      }}
-    >
+    <Link to={`/${title}`}>
       {image.gatsbyImageData ? (
         <GatsbyImage
           style={{ width: "100%" }}
