@@ -5,7 +5,10 @@ import { FaBars } from "react-icons/fa"
 import { Link } from "gatsby"
 
 function NavBar() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const mobileBreakpoint = 500
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
+  )
   const [showNav, setShowNav] = useState(false)
 
   useEffect(() => {

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
 
 function Seo({ name, image }) {
-  const [url, setUrl] = useState("")
+  const [url, setUrl] = useState("helllo world")
 
-  useEffect(() => {
-    setUrl(window.location.href)
-  }, [])
+  // useEffect(() => {
+  //   setUrl(window.location.href)
+  // }, [])
 
   return (
     <Helmet>
