@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
 
 function Seo({ name, image }) {
-  const title = name.toLowerCase().replace(/ /g, "-")
+  const title = name?.toLowerCase().replace(/ /g, "-")
   const [url, setUrl] = useState(
     `https://cooking-master-recipe-app.netlify.app/${title}`
   )
