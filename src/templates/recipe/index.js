@@ -32,7 +32,8 @@ function Recipe({ data }) {
     name,
   } = data.recipe
 
-  const url = "gegege"
+  const title = name.toLowerCase().replace(/ /g, "-")
+  const url = `https://cooking-master-recipe-app.netlify.app/${title}`
 
   return (
     <Wrapper>
