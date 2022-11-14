@@ -1,10 +1,28 @@
 import styled from "styled-components"
 import Slider from "react-slick"
 
-export const StyledSlider = styled(Slider)`
+export const SliderContainer = styled.div`
   max-height: 360px;
   margin-bottom: 20px;
   width: 100%;
+
+  .mobile-carousel {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .mobile-carousel {
+      display: block;
+    }
+    .desktop-carousel {
+      display: none;
+    }
+  }
+`
+
+export const StyledSlider = styled(Slider)`
+  width: 100%;
+  height: 100%;
   position: relative;
 
   .slick-arrow {
