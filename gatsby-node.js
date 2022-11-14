@@ -36,13 +36,6 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   })
   createPage({
-    path: `/recipes`,
-    component: path.resolve(`src/templates/recipes/index.js`),
-    context: {
-      page: "recipes",
-    },
-  })
-  createPage({
     path: `/`,
     component: path.resolve(`src/templates/home/index.js`),
     context: {
