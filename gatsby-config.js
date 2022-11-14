@@ -9,6 +9,9 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-styled-components`,

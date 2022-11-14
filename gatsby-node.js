@@ -23,28 +23,28 @@ exports.createPages = async ({ graphql, actions }) => {
 
   createPage({
     path: `/about`,
-    component: path.resolve(`src/templates/about/index.jsx`),
+    component: path.resolve(`src/templates/about/index.js`),
     context: {
       page: "about",
     },
   })
   createPage({
     path: `/contact`,
-    component: path.resolve(`src/templates/contact/index.jsx`),
+    component: path.resolve(`src/templates/contact/index.js`),
     context: {
       page: "contact",
     },
   })
   createPage({
     path: `/recipes`,
-    component: path.resolve(`src/templates/recipes/index.jsx`),
+    component: path.resolve(`src/templates/recipes/index.js`),
     context: {
       page: "recipes",
     },
   })
   createPage({
     path: `/`,
-    component: path.resolve(`src/templates/home/index.jsx`),
+    component: path.resolve(`src/templates/home/index.js`),
     context: {
       page: "home",
     },
@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const title = tag.toLowerCase().replace(/ /g, "-")
     createPage({
       path: `/tags/${title}`,
-      component: path.resolve(`src/templates/tags/index.jsx`),
+      component: path.resolve(`src/templates/tags/index.js`),
       context: {
         tag,
       },
@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from(Array(totalCount / 7).keys()).forEach((count, i, array) => {
     createPage({
       path: `/recipes/${count + 1}`,
-      component: path.resolve(`src/templates/recipes/index.jsx`),
+      component: path.resolve(`src/templates/recipes/index.js`),
       context: {
         skip: 7 * count,
         limit: 7,
@@ -91,7 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: `/${title}`,
-      component: path.resolve(`src/templates/recipe/index.jsx`),
+      component: path.resolve(`src/templates/recipe/index.js`),
       context: {
         name,
       },
