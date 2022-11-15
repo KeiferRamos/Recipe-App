@@ -1,6 +1,5 @@
 import React from "react"
 import { Header, TagsContainer, RecipeList, Pagination, Layout } from "./styled"
-import Bg from "../../assets/images/food-bg-4.webp"
 import { StaticImage } from "gatsby-plugin-image"
 import Recipe from "../../components/recipe"
 import Wrapper from "../../Layout/wrapper"

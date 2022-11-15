@@ -1,8 +1,5 @@
 import React, { memo } from "react"
 import styled from "styled-components"
-import Bg1 from "../../assets/images/food-bg-1.webp"
-import Bg2 from "../../assets/images/food-bg-2.webp"
-import Bg3 from "../../assets/images/food-bg-3.webp"
 import { StaticImage } from "gatsby-plugin-image"
 
 export const ImageBg = styled.div`
