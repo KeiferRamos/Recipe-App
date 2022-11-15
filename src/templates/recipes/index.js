@@ -1,7 +1,7 @@
 import React from "react"
 import { Header, TagsContainer, RecipeList, Pagination, Layout } from "./styled"
 import Bg from "../../assets/images/food-bg-4.webp"
-import Loading from "../../components/loading"
+import { StaticImage } from "gatsby-plugin-image"
 import Recipe from "../../components/recipe"
 import Wrapper from "../../Layout/wrapper"
 import { graphql, Link } from "gatsby"
@@ -16,7 +16,11 @@ function Recipes({
     <Wrapper>
       <Layout>
         <Header>
-          <img src={Bg} alt="image background" />
+          <StaticImage
+            src="../../assets/images/food-bg-4.webp"
+            alt="image background"
+            placeholder="dominantColor"
+          />
           <div>
             <h1>Recipe List For You!</h1>
             <p>

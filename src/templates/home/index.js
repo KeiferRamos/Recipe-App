@@ -51,7 +51,6 @@ export const RecipeContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 40px 0;
   margin-top: 100px;
 
   h1 {

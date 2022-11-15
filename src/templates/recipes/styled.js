@@ -21,7 +21,7 @@ export const Header = styled.header`
     }
   }
 
-  img {
+  .gatsby-image-wrapper {
     width: 500px;
     object-fit: cover;
     grid-row: span 2;
@@ -31,7 +31,7 @@ export const Header = styled.header`
     grid-template-columns: 500px auto;
     grid-template-rows: 1fr auto;
 
-    img {
+    .gatsby-image-wrapper {
       width: 100%;
       height: 300px;
       object-fit: cover;

@@ -3,49 +3,37 @@ import styled from "styled-components"
 import Bg1 from "../../assets/images/food-bg-1.webp"
 import Bg2 from "../../assets/images/food-bg-2.webp"
 import Bg3 from "../../assets/images/food-bg-3.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const ImageBg = styled.div`
   display: flex;
   flex: 1;
 
-  img {
-    width: 300px;
-    max-height: 450px;
-    transition: all 0.6s;
+  div {
+    .gatsby-image-wrapper {
+      height: 500px;
+      width: 300px;
+    }
   }
 
-  div {
+  section {
     display: grid;
     grid-template-rows: 1fr 1.5fr;
-    img {
-      height: 100%;
-      width: 100%;
-      min-width: 200px;
-      object-fit: cover;
-    }
   }
 
   @media (max-width: 1200px) {
     padding: 10px;
-
-    div {
-      img {
-        min-width: 200px;
-      }
-    }
+    width: 100%;
+    flex: auto;
   }
 
   @media (max-width: 600px) {
     padding: 0;
 
-    img {
-      min-width: auto;
-      width: 180px;
-    }
-
     div {
-      img {
-        min-width: 160px;
+      .gatsby-image-wrapper {
+        height: 300px;
+        width: 150px;
       }
     }
   }
@@ -54,11 +42,28 @@ export const ImageBg = styled.div`
 function BG() {
   return (
     <ImageBg>
-      <img src={Bg1} alt="recipe image" />
       <div>
-        <img src={Bg2} alt="recipe image" />
-        <img src={Bg3} alt="recipe image" />
+        <StaticImage
+          src="../../assets/images/food-bg-1.webp"
+          alt="recipe image"
+          placeholder="dominantColor"
+          layout="constrained"
+        />
       </div>
+      <section>
+        <StaticImage
+          src="../../assets/images/food-bg-2.webp"
+          alt="recipe image"
+          placeholder="dominantColor"
+          layout="constrained"
+        />
+        <StaticImage
+          src="../../assets/images/food-bg-3.webp"
+          alt="recipe image"
+          placeholder="dominantColor"
+          layout="constrained"
+        />
+      </section>
     </ImageBg>
   )
 }
