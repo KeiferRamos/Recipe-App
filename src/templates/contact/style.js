@@ -20,11 +20,13 @@ export const StyledForm = styled.form`
 
   input,
   textarea {
+    background: #e3e8e4;
+    box-shadow: inset 5px 5px 10px #d8dcd9, inset -5px -5px 10px #eef4ef;
     border-radius: 5px;
     padding: 0 10px;
     font-family: "Space Mono", monospace;
-    border: 1px solid #bebebe;
     font-size: 20px;
+    border: none;
   }
 
   textarea {
@@ -41,34 +43,4 @@ export const SubmitButton = styled.button`
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-`
-
-export const RecipeContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0;
-  margin-top: 100px;
-
-  h1 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 35px;
-  }
-
-  div {
-    h2 {
-      font-size: 25px;
-    }
-
-    img {
-      width: 100%;
-      height: 200px;
-
-      object-fit: cover;
-      transition: 0.5s;
-    }
-  }
 `

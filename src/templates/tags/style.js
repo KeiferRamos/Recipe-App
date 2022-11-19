@@ -15,12 +15,7 @@ export const Layout = styled.section`
 export const RecipeContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(340px, auto));
   gap: 10px;
-
-  a {
-    img {
-      max-height: 200px;
-    }
-  }
+  margin-bottom: 20px;
 `

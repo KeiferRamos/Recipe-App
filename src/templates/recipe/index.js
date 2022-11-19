@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import {
   Header,
   Instruction,
@@ -17,7 +17,6 @@ import {
   LinkedinShareButton,
 } from "react-share"
 
-import Loading from "../../components/loading"
 import SliderComp from "../../components/slider"
 import Wrapper from "../../Layout/wrapper"
 import { graphql } from "gatsby"
@@ -106,7 +105,11 @@ export const getData = graphql`
       }
       name
       image {
-        gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+        gatsbyImageData(
+          placeholder: TRACED_SVG
+          layout: CONSTRAINED
+          formats: WEBP
+        )
         url
       }
     }

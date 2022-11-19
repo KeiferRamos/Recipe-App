@@ -1,16 +1,9 @@
 import React from "react"
 import Wrapper from "../../Layout/wrapper"
 import Letter from "../../assets/icons/letter.webp"
-import { Layout, StyledForm, SubmitButton, RecipeContainer } from "./style"
+import { Layout, StyledForm, SubmitButton } from "./style"
 
-import { graphql } from "gatsby"
-import SliderComp from "../../components/slider"
-
-function ContactUs({
-  data: {
-    recipe: { nodes },
-  },
-}) {
+function ContactUs() {
   return (
     <Wrapper>
       <Layout>
@@ -34,27 +27,9 @@ function ContactUs({
           />
           <SubmitButton type="submit">submit</SubmitButton>
         </StyledForm>
-        <RecipeContainer>
-          <h1>featured Recipes</h1>
-          <SliderComp items={nodes} />
-        </RecipeContainer>
       </Layout>
     </Wrapper>
   )
 }
-
-export const getFeatured = graphql`
-  query {
-    recipe: allContentfulRecipe(filter: { featured: { eq: true } }) {
-      nodes {
-        image {
-          gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
-        }
-        name
-        cookingTime
-      }
-    }
-  }
-`
 
 export default ContactUs

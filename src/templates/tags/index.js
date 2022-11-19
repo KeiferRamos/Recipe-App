@@ -32,9 +32,10 @@ export const getData = graphql`
       nodes {
         name
         image {
-          gatsbyImageData(placeholder: TRACED_SVG)
+          gatsbyImageData(placeholder: TRACED_SVG, formats: WEBP)
         }
         cookingTime
+        featured
       }
     }
   }

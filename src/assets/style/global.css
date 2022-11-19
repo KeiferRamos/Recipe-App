@@ -16,11 +16,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #e3e8e4;
 }
 
 .App {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 150px);
   margin-bottom: 150px;
 }
 

@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   background: #303936;
   width: 100%;
   height: 150px;
-  padding: 20px;
+  padding: 15px;
   display: grid;
   place-items: center;
   gap: 5px;

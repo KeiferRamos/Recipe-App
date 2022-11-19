@@ -17,7 +17,12 @@ function NavBar() {
       <FaBars className="toggler" onClick={() => setShow(!show)} />
       <List className={show ? "show" : ""}>
         {Urls.map(({ name, path }, index) => (
-          <Link key={index} to={path} onClick={() => setShow(false)}>
+          <Link
+            activeClassName="active"
+            key={index}
+            to={path}
+            onClick={() => setShow(false)}
+          >
             {name}
           </Link>
         ))}

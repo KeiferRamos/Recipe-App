@@ -86,10 +86,6 @@ export const RecipeList = styled.div`
   padding: 15px 0;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 10px;
-
-  div {
-    height: 300px;
-  }
 `
 
 export const Pagination = styled.div`

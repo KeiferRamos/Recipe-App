@@ -21,6 +21,29 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  const {
+    data: { blogs },
+  } = await graphql(`
+    query getBlogsTitles {
+      blogs: allContentfulBlogs {
+        nodes {
+          title
+        }
+      }
+    }
+  `)
+
+  blogs.nodes.forEach(({ title }) => {
+    const pathName = title.toLowerCase().replace(/ /g, "-")
+    createPage({
+      path: `/blogs/${pathName}`,
+      component: path.resolve(`src/templates/blog/index.js`),
+      context: {
+        title,
+      },
+    })
+  })
+
   createPage({
     path: `/about`,
     component: path.resolve(`src/templates/about/index.js`),
@@ -40,6 +63,13 @@ exports.createPages = async ({ graphql, actions }) => {
     component: path.resolve(`src/templates/home/index.js`),
     context: {
       page: "home",
+    },
+  })
+  createPage({
+    path: "/blogs",
+    component: path.resolve(`src/templates/blogs/index.js`),
+    context: {
+      page: "blogs",
     },
   })
 

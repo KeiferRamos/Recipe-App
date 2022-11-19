@@ -39,6 +39,10 @@ export const StyledSlider = styled(Slider)`
     top: 30%;
   }
 
+  a {
+    border-radius: 0;
+  }
+
   .left {
     left: 5px;
   }

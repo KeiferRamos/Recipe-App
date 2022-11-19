@@ -19,6 +19,7 @@ function Recipes({
             src="../../assets/images/food-bg-4.webp"
             alt="image background"
             placeholder="dominantColor"
+            formats={["WEBP"]}
           />
           <div>
             <h1>Recipe List For You!</h1>
@@ -68,9 +69,10 @@ export const getData = graphql`
         cookingTime
         id
         image {
-          gatsbyImageData(placeholder: TRACED_SVG)
+          gatsbyImageData(placeholder: TRACED_SVG, formats: WEBP)
         }
         name
+        featured
       }
     }
   }

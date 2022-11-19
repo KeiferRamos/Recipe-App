@@ -28,7 +28,7 @@ export const Navbar = styled.nav`
   }
 
   .show {
-    height: 100%;
+    height: auto;
     padding: 10px;
   }
 
@@ -88,11 +88,15 @@ export const Title = styled.h1`
 export const List = styled.ul`
   display: flex;
   list-style: none;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
   color: #565a5c;
 
-  li {
-    cursor: pointer;
+  .active {
+    background: #35373f;
+    color: #bebebe;
+    padding: 5px 10px;
+    border-radius: 3px;
   }
 
   @media (max-width: 500px) {
