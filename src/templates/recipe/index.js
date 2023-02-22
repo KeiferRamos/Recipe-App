@@ -36,8 +36,8 @@ function Recipe({ data }) {
 
   return (
     <Wrapper>
+       <Seo name={name} image={image.url} />
       <Layout>
-        <Seo name={name} image={image.url} />
         <Header>
           <GatsbyImage image={getImage(image)} alt="recipe" />
           <div>
